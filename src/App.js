@@ -7,20 +7,20 @@ import SetCount from './components/SetCount';
 function App() {
 
   const [count,setCount] = useState(0);
-  // const [state,setState] = useState([]);
+  const [state,setState] = useState([]);
 
 
 
 
-  // useEffect(function() {
-  //   fetch('https://dummyjson.com/products')
-  //   .then(res => res.json())
-  //   .then(function(json) {
-  //    console.log(json)
-  //    setState([...state,...json.products])
-  //   } )
-  //   .catch(err => console.log(err))
-  // },[])
+  useEffect(function() {
+    fetch('https://dummyjson.com/products')
+    .then(res => res.json())
+    .then(function(json) {
+     console.log(json)
+     setState([...state,...json.products])
+    } )
+    .catch(err => console.log(err))
+  },[])
   
 
 
